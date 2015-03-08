@@ -1,16 +1,12 @@
 desc "Rename an App from old_name to new_name"
-task :rename_app, [:from_name, :to_name] do |t, args|
-  puts "#{args.name}"
-  
-  camelize_from_name = args.from_name.camelize
-  underscore_from_name = args.from_name.underscore
-  
+task :rename_app_to, [:to_name] do |t, args|  
   camelize_to_name = args.to_name.camelize
   underscore_to_name = args.to_name.underscore
   
-  replace camelize_from_name, camelize_to_name, 'app/views/layouts/application.html.erb'
-  replace camelize_from_name, camelize_to_name, 'config/application.rb'
-  replace underscore_from_name, underscore_to_name, 'config/initializers/session_store.rb'
+  replace 'SampleApp', camelize_to_name, 'app/views/layouts/application.html.erb'
+  replace 'SampleApp', camelize_to_name, 'config/application.rb'
+  replace 'sample_app', underscore_to_name, 'config/initializers/session_store.rb'
+  replace 'sample_app', underscore_to_name, '.ruby-gemset'
 end
 
 def replace from_string, to_string, file
