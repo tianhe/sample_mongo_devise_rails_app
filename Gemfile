@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-
+ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.0'
 
 #mongo
+gem 'mongoid-tree'
 gem 'mongoid'
 gem 'bson_ext'
 
@@ -19,9 +20,13 @@ gem 'autoprefixer-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'turbolinks'
 
+#background
+gem 'sidekiq'
+
 #core
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'unicorn'
+gem 'rack-timeout'
 
 #social
 gem 'devise'

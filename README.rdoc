@@ -1,6 +1,6 @@
 == README
 
-Sample App with Rails 4.2.0, Mongoid 4, Devise, and Facebook Authentication in API form.
+Sample App with Rails 4.2.0, Mongoid 4, Devise, Sidekiq, and Facebook Authentication in API form.
 
 1. git clone
 2. Copy config/mongoid.yml.example, and rename with appropriate database
@@ -14,6 +14,7 @@ Sample App with Rails 4.2.0, Mongoid 4, Devise, and Facebook Authentication in A
 
 * Database creation
 Install MongoDB
+Install Redis
 
 * Database initialization
 
