@@ -22,6 +22,7 @@ gem 'turbolinks'
 
 #background
 gem 'sidekiq'
+gem 'sinatra', require: nil
 
 #core
 gem 'sdoc', '~> 0.4.0',          group: :doc
