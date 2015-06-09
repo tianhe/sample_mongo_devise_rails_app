@@ -1,4 +1,4 @@
-== README
+== README ==
 
 Sample App with Rails 4.2.0, Mongoid 4, Devise, Sidekiq, and Facebook Authentication in API form.
 
