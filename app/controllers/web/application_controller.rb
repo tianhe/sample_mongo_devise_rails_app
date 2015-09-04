@@ -4,7 +4,13 @@ class Web::ApplicationController < ApplicationController
   private
   
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    user_id = session['warden.user.user.key'].try(:first).try(:first).try(:to_s)
+    @current_user ||= User.where(id: user_id).first if user_id
   end
 
+  def authenticate_user!
+    unless current_user
+      redirect_to :root
+    end
+  end
 end
