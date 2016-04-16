@@ -44,7 +44,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'mongoid-rspec', '~> 2.0.0.rc1'
+  gem 'mongoid-rspec'
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'faker'
